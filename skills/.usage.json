@@ -6,14 +6,14 @@
     "first_seen_at": null,
     "last_patched_at": null,
     "last_reused_patch_generation": 0,
-    "last_used_at": null,
-    "last_viewed_at": null,
+    "last_used_at": "2026-11-16T16:56:49.369537+00:00",
+    "last_viewed_at": "2026-11-16T16:56:49.345087+00:00",
     "patch_count": 0,
     "patch_generation": 0,
     "pinned": false,
     "state": "active",
-    "use_count": 0,
-    "view_count": 0
+    "use_count": 2,
+    "view_count": 2
   },
   "cdp-logged-in-browser": {
     "archived_at": null,
@@ -21,15 +21,15 @@
     "created_by": "agent",
     "first_seen_at": null,
     "last_patched_at": "2026-11-13T18:08:00.258898+00:00",
-    "last_reused_patch_generation": 2,
-    "last_used_at": "2026-11-13T18:06:56.568857+00:00",
-    "last_viewed_at": "2026-11-13T18:06:56.562905+00:00",
+    "last_reused_patch_generation": 8,
+    "last_used_at": "2026-11-16T16:53:12.683253+00:00",
+    "last_viewed_at": "2026-11-16T16:53:12.668283+00:00",
     "patch_count": 8,
     "patch_generation": 8,
     "pinned": false,
     "state": "active",
-    "use_count": 2,
-    "view_count": 2
+    "use_count": 3,
+    "view_count": 3
   },
   "computer-use": {
     "archived_at": null,
@@ -63,6 +63,22 @@
     "use_count": 1,
     "view_count": 1
   },
+  "github": {
+    "archived_at": null,
+    "created_at": "2026-11-16T16:53:09.746395+00:00",
+    "created_by": null,
+    "first_seen_at": null,
+    "last_patched_at": null,
+    "last_reused_patch_generation": 0,
+    "last_used_at": "2026-11-16T16:56:49.355700+00:00",
+    "last_viewed_at": "2026-11-16T16:56:49.338750+00:00",
+    "patch_count": 0,
+    "patch_generation": 0,
+    "pinned": false,
+    "state": "active",
+    "use_count": 4,
+    "view_count": 4
+  },
   "google-workspace": {
     "archived_at": null,
     "created_at": "2026-11-13T14:21:01.491549+00:00",
@@ -85,15 +101,15 @@
     "created_by": null,
     "first_seen_at": null,
     "last_patched_at": "2026-11-13T18:07:54.394399+00:00",
-    "last_reused_patch_generation": 3,
-    "last_used_at": "2026-11-13T18:07:46.353688+00:00",
-    "last_viewed_at": "2026-11-13T18:07:46.342770+00:00",
+    "last_reused_patch_generation": 5,
+    "last_used_at": "2026-11-16T16:57:02.780249+00:00",
+    "last_viewed_at": "2026-11-16T16:57:02.758316+00:00",
     "patch_count": 5,
     "patch_generation": 5,
     "pinned": false,
     "state": "active",
-    "use_count": 3,
-    "view_count": 3
+    "use_count": 4,
+    "view_count": 4
   },
   "linux-cron-jobs": {
     "archived_at": null,
@@ -102,14 +118,14 @@
     "first_seen_at": null,
     "last_patched_at": "2026-11-13T14:43:43.025178+00:00",
     "last_reused_patch_generation": 3,
-    "last_used_at": "2026-11-16T16:49:03.831214+00:00",
-    "last_viewed_at": "2026-11-16T16:49:03.824671+00:00",
+    "last_used_at": "2026-11-16T16:56:46.904239+00:00",
+    "last_viewed_at": "2026-11-16T16:56:46.889601+00:00",
     "patch_count": 3,
     "patch_generation": 3,
     "pinned": false,
     "state": "active",
-    "use_count": 2,
-    "view_count": 2
+    "use_count": 4,
+    "view_count": 4
   },
   "voice-note-transcription": {
     "archived_at": null,
@@ -117,14 +133,14 @@
     "created_by": "learn",
     "first_seen_at": null,
     "last_patched_at": "2026-11-15T02:36:46.762334+00:00",
-    "last_reused_patch_generation": 0,
-    "last_used_at": "2026-11-16T14:02:45.745748+00:00",
-    "last_viewed_at": "2026-11-16T14:02:45.739529+00:00",
+    "last_reused_patch_generation": 1,
+    "last_used_at": "2026-11-16T16:57:02.771765+00:00",
+    "last_viewed_at": "2026-11-16T16:57:02.745087+00:00",
     "patch_count": 1,
     "patch_generation": 1,
     "pinned": false,
     "state": "active",
-    "use_count": 1,
-    "view_count": 1
+    "use_count": 3,
+    "view_count": 3
   }
 }
