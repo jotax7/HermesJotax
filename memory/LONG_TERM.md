@@ -34,15 +34,19 @@
 - No inventar cifras. Si no hay dato, se dice "no hay dato".
 - Antes de mandar cualquier cosa afuera: mostrar el borrador.
 
-## Hilos abiertos al 16/11
+## Hilos abiertos (actualizado 16/11)
 
-1. **Pricing BoulderTech** — Joaco dice que ya está cerrado (audio 14/11). Nunca lo vi. Falta que me pase los 6 paquetes con montos y moneda.
-2. **Pipeline congelado** — 27 leads del CRM con último contacto entre 8 y 15 de septiembre. Nadie los tocó.
-3. **Gmail: 4 hilos esperándolo** — Esplendor Asunción ×2 (uno de 27 mensajes), Retail Perú, Dazzler Asunción (POC, 53 días).
-4. **El Recreo (Quito)** — Paulina Fuentes prometió el cuestionario el 6/11, sin respuesta. Recordatorio enviado 13/11. Propuesta: ofrecer completarlo en vivo en 20 min.
-5. **City Girl** — call comercial 16/11, van a comprar el agente. Dolor: rotación por isla/franquicia sin datos unificados.
-6. **Drive desactualizado** — el `CLAUDE TRASPASO` describe OpenClaw, que ya no usan (harness propio).
-7. **Contradicción sin resolver** — whitepaper dice 6 clientes en producción; la rueda comercial dice 12.
+**Cerrados por decisión de Joaco:**
+- ~~Pricing~~ — **no aplica**: lo define caso por caso, no hay documento. No volver a pedirlo ni proponer un anexo.
+- ~~Pipeline de septiembre~~ — **lista muerta**. Los 27 leads del CRM no se tocan. No proponer barridos ni reactivaciones.
+- ~~El Recreo~~ — **en espera pasiva**: hay que esperar que Paulina mande el cuestionario. No mandar más follow-ups.
+
+**Vivos:**
+1. **Gmail: 4 hilos esperándolo** — Esplendor Asunción ×2 (uno de 27 mensajes), Retail Perú, Dazzler Asunción (POC, 53 días). Sin instrucción, no tocar.
+2. **City Girl** — call del 16/11, van a comprar el agente. Dolor: rotación por isla/franquicia sin datos unificados. Este sí está activo.
+3. **Drive desactualizado** — el `CLAUDE TRASPASO` describe OpenClaw, que ya no usan (harness propio).
+4. **Contradicción sin resolver** — whitepaper dice 6 clientes en producción; la rueda dice 12.
+5. **Descubrimiento de su startup** — sin arrancar formalmente.
 
 ## Gente del ecosistema
 

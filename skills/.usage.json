@@ -116,16 +116,16 @@
     "created_at": "2026-11-13T14:21:01.491549+00:00",
     "created_by": null,
     "first_seen_at": null,
-    "last_patched_at": "2026-11-13T15:26:46.908979+00:00",
+    "last_patched_at": "2026-11-16T18:14:56.044091+00:00",
     "last_reused_patch_generation": 11,
-    "last_used_at": "2026-11-13T18:07:09.670723+00:00",
-    "last_viewed_at": "2026-11-13T18:07:09.661919+00:00",
-    "patch_count": 11,
-    "patch_generation": 11,
+    "last_used_at": "2026-11-16T18:14:40.788477+00:00",
+    "last_viewed_at": "2026-11-16T18:14:40.780150+00:00",
+    "patch_count": 12,
+    "patch_generation": 12,
     "pinned": false,
     "state": "active",
-    "use_count": 6,
-    "view_count": 6
+    "use_count": 7,
+    "view_count": 7
   },
   "hermes-agent": {
     "archived_at": null,
@@ -174,6 +174,22 @@
     "state": "active",
     "use_count": 2,
     "view_count": 2
+  },
+  "scheduled-agent-routines": {
+    "archived_at": null,
+    "created_at": "2026-11-16T18:14:36.081693+00:00",
+    "created_by": "agent",
+    "first_seen_at": null,
+    "last_patched_at": null,
+    "last_reused_patch_generation": 0,
+    "last_used_at": null,
+    "last_viewed_at": null,
+    "patch_count": 0,
+    "patch_generation": 0,
+    "pinned": false,
+    "state": "active",
+    "use_count": 0,
+    "view_count": 0
   },
   "third-party-skill-intake": {
     "archived_at": null,

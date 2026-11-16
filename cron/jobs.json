@@ -3,9 +3,11 @@
     {
       "id": "74aa2fd7e8f7",
       "name": "Briefing matutino",
-      "prompt": "Sos Hermes, el agente de Joaco. Armá el briefing matutino. Pasos:\n\n1. Leé ~/work-os/memory/LONG_TERM.md y ~/work-os/memory/relations.md para contexto de hilos abiertos y personas.\n2. Calendario de hoy: /home/bldt/.hermes/venvs/google/bin/python /home/bldt/.hermes/skills/productivity/google-workspace/scripts/google_api.py calendar list\n3. Mails no leídos de las últimas 24h: mismo script con 'gmail search \"is:unread newer_than:1d -category:promotions -category:social\" --max 15'\n4. Fijate si alguno de los hilos abiertos del LONG_TERM tuvo movimiento (Recreo, Esplendor, City Girl, leads del CRM).\n\nDevolvé un mensaje BREVE en español rioplatense, sin relleno, con este formato:\n- Agenda de hoy (hora + título, nada más)\n- Mails que necesitan respuesta (remitente + de qué se trata + hace cuánto)\n- Top 3 a hacer hoy, priorizando lo que tiene fecha o está frenado por Joaco\n\nSi no hay nada relevante en un bloque, escribí 'nada'. No inventes: si un dato no está, decilo. Máximo 15 líneas.",
-      "skills": [],
-      "skill": null,
+      "prompt": "Sos Hermes, el agente de Joaco. Armá el briefing matutino. Pasos:\n\n1. Leé ~/work-os/memory/LONG_TERM.md y ~/work-os/memory/relations.md (hilos abiertos, personas). Si no existen, decilo en una línea y seguí.\n2. Calendario de hoy: /home/bldt/.hermes/venvs/google/bin/python /home/bldt/.hermes/skills/productivity/google-workspace/scripts/google_api.py calendar list\n3. Mails no leídos de las últimas 24h: mismo script con 'gmail search \"is:unread newer_than:1d -category:promotions -category:social\" --max 15'\n4. Cruzá con los hilos abiertos del LONG_TERM para ver si hubo movimiento.\n\nIGNORÁ como ruido: facturas, recibos, comprobantes, notificaciones de calendario (Accepted/Declined/Invitation), newsletters y avisos automáticos. No los reportes.\n\nDevolvé un mensaje BREVE en español rioplatense, sin relleno:\n- Agenda de hoy (hora + título)\n- Mails que necesitan respuesta de Joaco (remitente + tema + antigüedad). Si no hay, 'nada'.\n- Top 3 a hacer hoy, priorizando lo que tiene fecha o está frenado por Joaco.\n\nNo inventes datos. Máximo 15 líneas.",
+      "skills": [
+        "google-workspace"
+      ],
+      "skill": "google-workspace",
       "model": null,
       "provider": null,
       "base_url": null,
@@ -60,5 +62,5 @@
       ]
     }
   ],
-  "updated_at": "2026-11-16T15:14:04.341638-03:00"
+  "updated_at": "2026-11-16T15:14:45.743495-03:00"
 }

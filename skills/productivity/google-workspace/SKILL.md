@@ -360,6 +360,7 @@ All commands return JSON. Parse with `jq` or read directly. Key fields:
 | `AUTHENTICATED (partial)` or "Token missing scopes" | New write capabilities (Drive write/delete, Docs create/edit) require re-authorization. `$GSETUP --revoke` then redo Steps 3-5 to grant the upgraded scopes. |
 | `HttpError 403: Access Not Configured` | API not enabled — user needs to enable it in Google Cloud Console |
 | `ModuleNotFoundError` | Run `$GSETUP --install-deps` |
+| `gmail get` returns an empty `body` | The message is HTML-only: there is no plain-text part to return. Don't read it as "empty mail" — fall back to the `snippet` from `gmail search`, or parse the HTML part. Confirm which sender/thread you are looking at before drawing conclusions from a blank body. |
 | Advanced Protection blocks auth | Workspace admin must allowlist the OAuth client ID |
 
 ## Revoking Access
