@@ -90,3 +90,11 @@ daily and let it gate itself:
   exist. `mkdir -p` the category directory first and check the copy result, not the echo.
 - Sync scripts that copy the whole skills tree will pull in hub caches and `__pycache__`; exclude them
   in both the script and `.gitignore`.
+- **Excluding a big blob after the fact does not shrink the repo.** Once a cache file is committed it
+  lives in history and every clone keeps paying for it; `git rm --cached` plus a `.gitignore` line only
+  stops future commits. Decide the exclusion set *before* the first push, then verify with
+  `git ls-files | xargs -r du -ch | tail -1` and `find . -path ./.git -prune -o -type f -size +20M`.
+  If it already landed in history, say so plainly: only a history rewrite or a fresh repo removes it.
+- A push can succeed with warnings ("File X is 51.27 MB; larger than GitHub's recommended maximum").
+  Treat any size warning as a defect to fix in the same turn, not as noise — the next file will be
+  rejected outright.

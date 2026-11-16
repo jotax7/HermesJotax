@@ -81,6 +81,18 @@ Default structure:
 5. recommendation
 6. sources
 
+### Chat answer vs. artefact — this split is the user's preference, not a style choice
+
+- **The chat reply is a summary**: one paragraph plus bullets, roughly 15 lines, carrying the decision
+  and the two or three numbers that drive it. No tables, no restating the method.
+- **The full dossier goes to a file** (`research/<company-or-topic>.md` inside the versioned work repo,
+  linked or attached), with sources, gaps and the long analysis. Never paste a 60-line dossier into chat
+  and never make the user scroll for the conclusion.
+- **Live-meeting mode:** when the user is in a call while asking, drop the structure entirely and reply
+  with three things — the question to ask, the number to cite, and the hook — in under ten lines. Save the
+  depth for after the call.
+- Say which of the two you are delivering in the first line ("resumen, ficha completa en el archivo").
+
 ## Pitfalls
 
 - **Verify the vertical before analysing it.** A brand name plus the user's context is not evidence of
