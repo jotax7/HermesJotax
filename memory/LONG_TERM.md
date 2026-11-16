@@ -44,6 +44,10 @@
 - ~~Pipeline de septiembre~~ — **lista muerta**. Los 27 leads del CRM no se tocan. No proponer barridos ni reactivaciones.
 - ~~El Recreo~~ — **en espera pasiva**: hay que esperar que Paulina mande el cuestionario. No mandar más follow-ups.
 
+**Pendientes personales (16/11, repetir hasta tachar):**
+- Hablarle a Migoya.
+- Hacer el presupuesto de voz para Tomi.
+
 **Vivos:**
 1. **Gmail: 4 hilos esperándolo** — Esplendor Asunción ×2 (uno de 27 mensajes), Retail Perú, Dazzler Asunción (POC, 53 días). Sin instrucción, no tocar.
 2. **City Girl** — call del 16/11, van a comprar el agente. Dolor: rotación por isla/franquicia sin datos unificados. Este sí está activo.

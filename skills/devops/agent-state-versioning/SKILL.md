@@ -84,6 +84,11 @@ daily and let it gate itself:
 
 ## Pitfalls
 
+- **Never `rsync --delete` a directory you also edit by hand.** Mirroring a shared directory
+  (`memory/`, `notes/`) deletes every file that only exists in the repo — and because the sync runs
+  before the commit, the loss never reaches git history and cannot be recovered from it. Copy the
+  specific files the script owns (`USER.md`, `MEMORY.md`) one at a time and leave the rest of the
+  directory alone; reserve `--delete` for directories the script fully generates.
 - `rsync --delete` leaves excluded files behind and fails with "cannot delete non-empty directory";
   add `--delete-excluded` when the exclusion is a cache you do want gone from the mirror.
 - `cp -r src dest && echo OK;` prints OK even when `cp` failed because the parent directory did not

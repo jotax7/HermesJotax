@@ -3,7 +3,7 @@
     {
       "id": "74aa2fd7e8f7",
       "name": "Briefing matutino",
-      "prompt": "Sos Hermes, el agente de Joaco. Armá el briefing matutino. Pasos:\n\n1. Leé ~/work-os/memory/LONG_TERM.md y ~/work-os/memory/relations.md (hilos abiertos, personas). Si no existen, decilo en una línea y seguí.\n2. Calendario de hoy: /home/bldt/.hermes/venvs/google/bin/python /home/bldt/.hermes/skills/productivity/google-workspace/scripts/google_api.py calendar list\n3. Mails no leídos de las últimas 24h: mismo script con 'gmail search \"is:unread newer_than:1d -category:promotions -category:social\" --max 15'\n4. Cruzá con los hilos abiertos del LONG_TERM para ver si hubo movimiento.\n\nIGNORÁ como ruido: facturas, recibos, comprobantes, notificaciones de calendario (Accepted/Declined/Invitation), newsletters y avisos automáticos. No los reportes.\n\nDevolvé un mensaje BREVE en español rioplatense, sin relleno:\n- Agenda de hoy (hora + título)\n- Mails que necesitan respuesta de Joaco (remitente + tema + antigüedad). Si no hay, 'nada'.\n- Top 3 a hacer hoy, priorizando lo que tiene fecha o está frenado por Joaco.\n\nNo inventes datos. Máximo 15 líneas.",
+      "prompt": "Sos Hermes, el agente de Joaco. Armá el briefing matutino. Pasos:\n\n1. Leé ~/work-os/memory/LONG_TERM.md y ~/work-os/memory/relations.md (hilos abiertos, personas). Si no existen, decilo en una línea y seguí.\n2. Calendario de hoy: /home/bldt/.hermes/venvs/google/bin/python /home/bldt/.hermes/skills/productivity/google-workspace/scripts/google_api.py calendar list\n3. Mails no leídos de las últimas 24h: mismo script con 'gmail search \"is:unread newer_than:1d -category:promotions -category:social\" --max 15'\n4. Pendientes de Joaco: leé la sección \"Pendientes de Joaco\" del doc de Drive id 190mCXyGaxFyBT_DxrClr9BbjRJevT-9LmZ7fVbS8fCw (exportar como text/plain con Drive API) y listalos. Si no podés leerlo, tomalos de la sección 'Hilos abiertos' del LONG_TERM.\n\nIGNORÁ como ruido: facturas, recibos, comprobantes, notificaciones de calendario (Accepted/Declined/Invitation), newsletters y avisos automáticos.\n\nDevolvé un mensaje BREVE en español rioplatense, sin relleno:\n- Agenda de hoy (hora + título)\n- Mails que necesitan respuesta de Joaco (remitente + tema + antigüedad). Si no hay, 'nada'.\n- Pendientes anotados (los que figuran en el doc)\n- Top 3 a hacer hoy\n\nNo inventes datos. Máximo 18 líneas.",
       "skills": [
         "google-workspace"
       ],
@@ -60,7 +60,58 @@
       "canonical_completions": [
         "29e965513cb1468ca24aae36d8074ebe"
       ]
+    },
+    {
+      "id": "cb10a53319ce",
+      "name": "Recordatorio: Migoya + presupuesto voz Tomi",
+      "prompt": "Recordatorio para Joaco. Mandá exactamente este mensaje, sin agregar nada:\n\n⏰ Pendientes de ayer:\n• Hablarle a Migoya\n• Hacer el presupuesto de voz para Tomi\n\nCuando estén, decime y los tacho del doc.",
+      "skills": [],
+      "skill": null,
+      "model": null,
+      "provider": null,
+      "base_url": null,
+      "script": null,
+      "no_agent": false,
+      "monitor_script": null,
+      "monitor_url": null,
+      "monitor_state": null,
+      "context_from": null,
+      "schedule": {
+        "kind": "once",
+        "run_at": "2026-11-17T09:00:00-03:00",
+        "display": "once at 2026-11-17 09:00"
+      },
+      "schedule_display": "once at 2026-11-17 09:00",
+      "repeat": {
+        "times": 1,
+        "completed": 0
+      },
+      "enabled": true,
+      "state": "scheduled",
+      "paused_at": null,
+      "paused_reason": null,
+      "created_at": "2026-11-16T15:36:37.518352-03:00",
+      "next_run_at": "2026-11-17T09:00:00-03:00",
+      "last_run_at": null,
+      "last_status": null,
+      "last_error": null,
+      "last_delivery_error": null,
+      "last_delivery_unverified": null,
+      "last_failure": null,
+      "failure_streak": 0,
+      "deliver": "origin",
+      "origin": {
+        "platform": "telegram",
+        "chat_id": "6002442854",
+        "chat_name": "Wiggy",
+        "thread_id": null,
+        "user_id": "6002442854",
+        "scope_id": null
+      },
+      "enabled_toolsets": [],
+      "workdir": null,
+      "timezone": "America/Argentina/Buenos_Aires"
     }
   ],
-  "updated_at": "2026-11-16T15:14:45.743495-03:00"
+  "updated_at": "2026-11-16T15:36:37.523466-03:00"
 }
