@@ -64,7 +64,18 @@ $C eval "location.href"
 Pass `--port N` when not on 9222. The client sets `suppress_origin=True` on the
 websocket — Chromium rejects handshakes carrying an `Origin` header.
 
-## 3. Clicking real web apps (Angular / Material / Cloud Console)
+## 3. Password walls: use the provider session
+
+When the target site offers social login and the copied profile already holds that provider's
+session, that is the fastest way past a password prompt: tap `Continue with Google`, then the
+account tile. The site authenticates without any credential crossing the chat.
+
+Two-factor is a hard stop — it is the user's step. Drive the browser up to the 2FA screen, tell
+them exactly which window is waiting (screenshot it), and stop there. Never attempt the code, and
+never ask for it in chat. If the site's social login belongs to a *different* account than the one
+owning the target repo/project, the user will say so — ask which account owns it before starting.
+
+## 4. Clicking real web apps (Angular / Material / Cloud Console)
 
 Synthetic JS events are **not enough**. Dispatching `pointerdown`/`mousedown`/`click` from `element.click()` or a `MouseEvent` chain gets ignored by Angular Material buttons — the page just sits there and looks like the click never happened.
 
