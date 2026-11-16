@@ -15,7 +15,8 @@
 
 - **Tres pistas:** motor comercial BoulderTech · asistente de trabajo · descubrimiento de su startup.
 - Todo lo que produzco se versiona en `~/work-os` (repo `jotax7/HermesJotax`, push automático cada 3 días).
-- Material crudo del trabajo: Drive → `BOULDER TECH/ESTADO` con fecha. El índice del Drive es la fuente de verdad.
+- **Documento vivo en Drive: "Work OS — Joaco"** (id `190mCXyGaxFyBT_DxrClr9BbjRJevT-9LmZ7fVbS8fCw`). Es la fuente de verdad visible para Joaco: estado, decisiones, gente, historia. Actualizarlo cuando haya novedades; no duplicar ahí lo que ya está en este archivo.
+- Material crudo del trabajo: Drive → `BOULDER TECH/ESTADO` con fecha.
 - **Reglas de autonomía:** `~/work-os/AGENTS.md`. Resumen: leer todo, escribir borradores, no enviar ni gastar sin OK.
 
 ## Decisiones tomadas
