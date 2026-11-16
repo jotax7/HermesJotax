@@ -1,0 +1,65 @@
+{
+  "jobs": [
+    {
+      "id": "74aa2fd7e8f7",
+      "name": "Briefing matutino",
+      "prompt": "Sos Hermes, el agente de Joaco. Armá el briefing matutino. Pasos:\n\n1. Leé ~/work-os/memory/LONG_TERM.md y ~/work-os/memory/relations.md para contexto de hilos abiertos y personas.\n2. Calendario de hoy: /home/bldt/.hermes/venvs/google/bin/python /home/bldt/.hermes/skills/productivity/google-workspace/scripts/google_api.py calendar list\n3. Mails no leídos de las últimas 24h: mismo script con 'gmail search \"is:unread newer_than:1d -category:promotions -category:social\" --max 15'\n4. Fijate si alguno de los hilos abiertos del LONG_TERM tuvo movimiento (Recreo, Esplendor, City Girl, leads del CRM).\n\nDevolvé un mensaje BREVE en español rioplatense, sin relleno, con este formato:\n- Agenda de hoy (hora + título, nada más)\n- Mails que necesitan respuesta (remitente + de qué se trata + hace cuánto)\n- Top 3 a hacer hoy, priorizando lo que tiene fecha o está frenado por Joaco\n\nSi no hay nada relevante en un bloque, escribí 'nada'. No inventes: si un dato no está, decilo. Máximo 15 líneas.",
+      "skills": [],
+      "skill": null,
+      "model": null,
+      "provider": null,
+      "base_url": null,
+      "script": null,
+      "no_agent": false,
+      "monitor_script": null,
+      "monitor_url": null,
+      "monitor_state": null,
+      "context_from": null,
+      "schedule": {
+        "kind": "cron",
+        "expr": "30 8 * * *",
+        "display": "every day at 8:30am"
+      },
+      "schedule_display": "every day at 8:30am",
+      "repeat": {
+        "times": null,
+        "completed": 0
+      },
+      "enabled": true,
+      "state": "scheduled",
+      "paused_at": null,
+      "paused_reason": null,
+      "created_at": "2026-11-16T15:13:35.554978-03:00",
+      "next_run_at": "2026-11-17T08:30:00-03:00",
+      "last_run_at": null,
+      "last_status": null,
+      "last_error": null,
+      "last_delivery_error": null,
+      "last_delivery_unverified": null,
+      "last_failure": null,
+      "failure_streak": 0,
+      "deliver": "origin",
+      "origin": {
+        "platform": "telegram",
+        "chat_id": "6002442854",
+        "chat_name": "Wiggy",
+        "thread_id": null,
+        "user_id": "6002442854",
+        "scope_id": null
+      },
+      "enabled_toolsets": [
+        "terminal",
+        "web"
+      ],
+      "workdir": null,
+      "attach_to_session": true,
+      "timezone": "America/Argentina/Buenos_Aires",
+      "fire_claim": {
+        "at": "2026-11-16T15:13:41.271347-03:00",
+        "by": "BLDTAGENT04:1266:2f3cf8c92e4f461785cd2046dfd8647e",
+        "extra_slot": "2026-11-17T08:30:00-03:00"
+      }
+    }
+  ],
+  "updated_at": "2026-11-16T15:13:41.271958-03:00"
+}

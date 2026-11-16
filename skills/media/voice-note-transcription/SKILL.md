@@ -62,6 +62,13 @@ worth just using `medium` from the start when the message likely contains contac
 - **Emails and proper nouns get mangled by `small`.** If a transcription contains something that
   looks like a contact, re-run with `medium` before guessing; if still unclear, ask the user to
   spell it out or send a screenshot. Never reconstruct an address from a bad transcription.
+- **A `small`-model garble is not evidence the audio was bad.** Never tell the user "no se pudo
+  transcribir" or ask them to repeat an address until `medium` has actually run — the clip that looks
+  like noise on `small` frequently comes back clean, spelled-out email included. Say "lo paso con el
+  modelo grande" instead of "falló", or you end up apologising for a failure that never happened.
+- **`medium` on CPU is minutes, not seconds** (roughly 5-6x `small`; a one-minute clip can take five
+  minutes on a Pi). Launch it as a tracked background process and poll, and tell the user it is running
+  so the silence is not read as a stall.
 - **The user may already have spelled it out.** "ce de corta doble ene manuel arroba gimeil punto com"
   is a dictated email, not noise — transcribe it and confirm with the user, do not assume it failed.
 - First run downloads model weights from Hugging Face (needs network, prints an "unauthenticated

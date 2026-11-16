@@ -49,6 +49,12 @@ scope. Instead:
 
 If the user insists on a token, have *them* feed it to the GitHub CLI themselves; never accept it in chat.
 
+Do not try to complete the interactive web/device auth yourself when the CLI is unauthenticated: the
+device flow needs a browser session that is already logged in and then a 2FA code, and 2FA is the
+user's to enter. Driving the browser to the code page only parks you in front of a prompt you cannot
+answer (and "Continue with Google" gets you exactly as far as the TOTP screen). Go straight to the
+deploy-key path above — one paste of a public key and the push is unblocked.
+
 ## Getting the first push through
 
 - The empty-looking repo may already contain an `Initial commit` with a README. Do not force-push over

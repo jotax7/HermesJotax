@@ -33,6 +33,13 @@ later session can resume from where the last one stopped.
 On every activation, perform these steps **before** asking any interview
 question:
 
+0. **Establish whose identity is the subject — and say it out loud.** "Brand"
+   here means a person, a product, a company, or the user's own venture. Never
+   infer the subject from the user's employer, their job title, or documents
+   already in context: working at a company does not mean the exercise is about
+   that company. Ask whose brand this is before the first question of Module 10
+   and record the answer as a `subject` field in `state.json`. Getting this
+   wrong burns the whole first session and reads as not listening.
 1. **Check for prior progress.** Look for an existing set of module files
    and a `state.json` checkpoint in the project's brand-identity directory.
    If none exists, this is a fresh start — confirm the brand name,

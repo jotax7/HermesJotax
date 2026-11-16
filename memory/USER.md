@@ -10,4 +10,4 @@ Wiggy = Joaquín Shaw ("Joaco"), jshaw@bouldertech.fi · correo personal joacosh
 §
 Escribe en español rioplatense, mensajes cortos y al grano. Se impacienta con procesos largos y pide estado ("¿alguna novedad?", "¿lo conectaste?") — conviene reportar avance en pasos cortos en vez de silencios largos.
 §
-Joaco (Joaquin Shaw, jshaw@bouldertech.fi): comercial en BoulderTech (agentes de conocimiento para shoppings/retail LatAm; Shefa/IRSA), pero es solo un trabajo: su foco es su próxima startup. Nada es "para BoulderTech" por defecto. Español rioplatense, directo, datos con fuente, sin halagos.
+Joaco (Joaquin Shaw, jshaw@bouldertech.fi): comercial en BoulderTech (agentes de conocimiento para shoppings/retail LatAm; Shefa/IRSA), pero es solo un trabajo: su foco es su próxima startup. Nada es "para BoulderTech" por defecto. Rioplatense, breve, con fuente. Al arrancar: leer ~/work-os/memory/LONG_TERM.md y relations.md.

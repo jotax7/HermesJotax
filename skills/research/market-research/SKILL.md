@@ -42,6 +42,22 @@ Collect:
 - distribution and pricing clues
 - strengths, weaknesses, and positioning gaps
 
+### Company Dossier (a single company)
+Collect, in this order:
+- what the company actually sells and where — verified from its own catalogue, never inferred from the
+  name or from the category the user called it
+- legal shape, headcount, HQ, founding year
+- business model and who really pays: distributor, franchisee or end customer are not the same payer
+- scale signals: location count, openings, network size, hiring activity
+- pricing and catalogue shape (SKU count by category beats "a wide range")
+- digital footprint with quality metrics — follower count *and* engagement, never followers alone
+- undated sources, flagged as possibly stale
+Output separates `## Facts`, `## Inference`, `## Information gaps`.
+
+For retail and franchise businesses, work out who the customer of the business actually is before
+analysing risk: a franchisor earns from supplying its network, not from the till of any single store.
+That inverts the risk read and is usually where the operational data pain lives.
+
 ### Market Sizing
 Use:
 - top-down estimates from reports or public datasets
@@ -64,6 +80,19 @@ Default structure:
 4. risks and caveats
 5. recommendation
 6. sources
+
+## Pitfalls
+
+- **Verify the vertical before analysing it.** A brand name plus the user's context is not evidence of
+  what the company sells — a brand present in shopping malls can be beauty retail rather than apparel.
+  Confirm from its own catalogue or store listing first; analysing the wrong industry invalidates the
+  whole dossier and the recommendation built on it.
+- **Consumer brand names collide.** Same-country namesakes and unrelated shops with an identical sign are
+  the standard trap. Search the name with a differentiator (city, category, founder) and check every source
+  is about the same company.
+- **Franchise and "current status" case studies are usually undated.** Figures like "2 open, 3 opening, 9
+  reserved" age badly; present them as "at the time of that source" and list the live count as an
+  information gap instead of asserting it as current.
 
 ## Quality Gate
 
