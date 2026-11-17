@@ -51,8 +51,15 @@ bajo" is an opinion; "un proveedor que cambia su API se come el margen de tres m
 - **The monthly fee must stand on its own against the annual setup.** A recurring fee whose annual total
   is well under the one-time setup tells the client the implementation is the product and the operation is
   an afterthought — and it will not cover the integration maintenance that follows.
-- **Never ship "consultoría incluida" without an hour cap.** Open-ended advisory is the most expensive line
-  in the document and the one the client values most; cap it (hours per month) and price the overflow.
+- **Never ship "consultoría incluida" without a cap, and cap two things at once.** Open-ended advisory is
+  the most expensive line in the document and the one the client values most. He thinks in *meetings per
+  month*, not hours of work: write "hasta 2 sesiones de 60 min por mes" **and** "hasta 6 horas totales por
+  mes", sharing one pool, no rollover, overflow approved in writing. The first 90 days can carry a weekly
+  session *inside* that same cap — adoption is won there, not in month twelve.
+- **Scale the cap with the fee, not with the client's appetite.** One day of senior time (8 h) per
+  USD 1.500 of monthly fee is the reference. At 1.500/mes: 6 h leaves USD 250/h, 8 h leaves 187/h, 12 h
+  leaves 125/h — under ~150/h the "SaaS" has quietly become an underpriced consulting retainer. Price the
+  overflow high (150-180/h) so it deters rather than invites.
 - **Never ship "hasta N usuarios" under a flat fee.** Define the seats included and charge in tiers. Otherwise
   the day the rest of the company logs in, revenue stays flat and the relationship has nowhere to grow.
 - **Do not gift extra sources or modules.** Price them, then discount the bundle. A gift destroys the
@@ -70,6 +77,10 @@ Every proposal that leaves the building carries:
 - **Term**: minimum duration plus notice period.
 - **Payment schedule**: e.g. part at kickoff, part at go-live.
 - **Validity date**: a proposal with no expiry sits in a drawer for three months and forces a reprice.
+  When the budget is for the *next* fiscal year, split it into two clauses: "validez de la oferta" (30 days
+  to accept these terms) and "vigencia del precio" (setup and fee frozen through the planning year, start
+  date to be scheduled). Written as one clause, the two ideas contradict each other — an offer that expires
+  in December cannot also hold for March.
 - **What breaks the fixed fee**: a vendor changing or deprecating an integration, a client-side system
   migration, new sources, new areas, extra users.
 - **Data and exit**: what happens to the configuration, the business definitions ("qué es un cliente
@@ -79,6 +90,10 @@ Every proposal that leaves the building carries:
 ## Output shape
 
 - **Chat**: verdict in one line, then the changes ranked by money at risk. Short; he is usually mid-deal.
+- **Answer first, copy later.** When he asks *qué me conviene poner*, he wants the recommendation plus the
+  arithmetic behind it ("8 horas te queda a USD 187 la hora"), not a block of text to paste. Give paste-ready
+  wording only when he asks for it, or once he has already picked the number and the task is transcription.
+  He will say so explicitly when he wants the document written.
 - **File**: the full scope, the source inventory table, the out-of-scope list and the open questions, saved
   in the proposals folder of his working repo and mirrored to Drive if he asks.
 - Do not send anything to the client from this skill: drafts only, his OK in the same turn.
@@ -104,3 +119,5 @@ Every proposal that leaves the building carries:
 
 - `references/cost-drivers.md` — variable cost components per product line (voice/WhatsApp agents,
   self-hosted knowledge agents, integrations) and the questions that decide integration effort.
+- `references/reading-client-inputs.md` — recipe for pulling the client's questionnaire or notes out of a
+  mail attachment (Gmail attachment API, python-docx tables, pypdf/pdftotext) and what to mine from it.
