@@ -74,6 +74,10 @@ architecture, the caps and the terms. Never hand him a currency figure as "the r
 
 ## Pitfalls
 
+- **Memory writes are all-or-nothing and the error tells you how many characters to free.** Rewording an
+  entry slightly shorter and retrying burns turns: the response gives the exact overflow, and a patch that
+  shortens one entry while adding another only applies if the final total fits. Compose the whole batch
+  (trim or drop one entry, add the new one) from that number on the first retry.
 - **A roadmap built on stale documents is worse than no roadmap.** Check the newest modified date in
   the material before drawing conclusions; a folder reflecting last month produces advice for a
   problem that is already solved, and he will tell you so.
