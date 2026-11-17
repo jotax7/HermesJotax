@@ -45,7 +45,7 @@
 - ~~El Recreo~~ — **en espera pasiva**: hay que esperar que Paulina mande el cuestionario. No mandar más follow-ups.
 
 **Pendientes personales (16/11, repetir hasta tachar):**
-- Hablarle a Migoya.
+- ~~Hablarle a Migoya~~ — hecho 17/11.
 - Hacer el presupuesto de voz para Tomi.
 
 **Vivos:**
