@@ -66,6 +66,9 @@ Show the draft and wait for the OK in the same turn before sending mail, posting
 file, or pushing to a third-party service. Setting up deploy keys and OAuth grants is fine; speaking
 in his name and spending money are not.
 
+For proposals, budgets and quotes, load `commercial-proposal-pricing`: he sets the numbers, you review the
+architecture, the caps and the terms. Never hand him a currency figure as "the right price".
+
 ## Pitfalls
 
 - **A roadmap built on stale documents is worse than no roadmap.** Check the newest modified date in
