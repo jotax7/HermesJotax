@@ -20,6 +20,10 @@
 
 ## Prospectos y clientes
 
+- **Fulter** — **cliente activo**. Tiene el Agente de Conocimiento: entrada de USD 4.500 y abono de **USD 550/mes**. Operación logística (tracking, booking, puertos, depósitos).
+  - **17/11:** presupuesto de módulo de voz enviado: **USD 1.500 de implementación + USD 800/mes** (pasa a 1.350/mes). Modelo propuesto: Qwen3-Omni 30B-A3B on-premise. Plazo 3 semanas en 3 fases.
+  - **Riesgo abierto:** el servidor del cliente puede no tener VRAM suficiente (Qwen reporta ~78,85 GB en BF16). Se define en la Fase 0.
+
 - **City Girl ®** — belleza y accesorios, fundada 2019, HQ Perón 2528 (CABA). Franquicias desde 2023 (consultora Canudas), isla en Abasto (subsuelo N00L0014), aperturas en DOT y San Luis. Inversión desde USD 81.000, recupero 18 meses. 2 operativos + 3 en apertura + 9 reservados. IG @citygirl.beauty 221K, engagement 0,2%.
   - **Estado 16/11:** call comercial, van a comprar el agente de conocimiento.
   - **Dolor:** no hay dato unificado de venta por isla/franquicia.

@@ -44,6 +44,11 @@
 - ~~Pipeline de septiembre~~ — **lista muerta**. Los 27 leads del CRM no se tocan. No proponer barridos ni reactivaciones.
 - ~~El Recreo~~ — **en espera pasiva**: hay que esperar que Paulina mande el cuestionario. No mandar más follow-ups.
 
+**Cerrado el 17/11:**
+- ~~Presupuesto Fulter (módulo de voz)~~ — terminado y enviado. USD 1.500 setup + 800/mes sobre un abono actual de 550 (pasa a 1.350/mes). Cliente existente, entrada original 4.500 + 550.
+- ~~Investigación de modelos de voz~~ — informe consolidado en `research/2026-11-17_voz-bidireccional-INFORME-FINAL.md` + PDF de recomendación Qwen3-Omni.
+- ~~Presupuesto El Recreo~~ — terminado e iterado con Sabri.
+
 **Pendientes personales (16/11, repetir hasta tachar):**
 - ~~Hablarle a Migoya~~ — hecho 17/11.
 - Hacer el presupuesto de voz para Tomi.
