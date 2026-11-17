@@ -44,6 +44,39 @@ if reqs:
     docs.documents().batchUpdate(documentId=did, body={"requests": reqs}).execute()
 ```
 
+## Appending a section to an existing doc
+
+For a living document (state board, running log) the update path is append-only, and it has two traps:
+duplicating a section that already exists, and styling the wrong paragraph.
+
+```python
+doc = docs.documents().get(documentId=did).execute()
+insert_at = doc["body"]["content"][-1]["endIndex"] - 1   # last valid index; -1 because it is exclusive
+
+existing = "".join(r.get("textRun", {}).get("content", "")
+                   for c in doc["body"]["content"]
+                   for r in c.get("paragraph", {}).get("elements", []))
+if "7. Pendientes" in existing:
+    return "already there — do not append twice"
+
+TEXT = "\n\n7. Pendientes\n\nHablarle a Migoya.\n"
+reqs = [
+    {"insertText": {"location": {"index": insert_at}, "text": TEXT}},
+    {"updateParagraphStyle": {
+        "range": {"startIndex": insert_at + 2,                     # +2 skips the leading blank lines
+                  "endIndex": insert_at + 2 + len("7. Pendientes")},
+        "paragraphStyle": {"namedStyleType": "HEADING_1"}, "fields": "namedStyleType"}},
+]
+docs.documents().batchUpdate(documentId=did, body={"requests": reqs}).execute()
+```
+
+- **Dedupe before writing.** Docs has no upsert: read the document, flatten its text, look for the section
+  heading, and skip if it is there. Cheaper than reconciling a document with two copies of the same list.
+- **`endIndex` is exclusive**, so the append point is `endIndex - 1`, and the style range of the appended
+  block starts after however many leading newlines you inserted, not at the insert index.
+- Appending is the right move for a log or a pending list. Rewriting the whole body is the right move for a
+  structural change — pick per document and note which one it is at the top of the file.
+
 ## Rules
 
 - **Offsets are cumulative and include the trailing newline** of every line (`len(line) + 1`).

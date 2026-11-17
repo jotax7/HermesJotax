@@ -34,6 +34,25 @@ Collect:
 - reasons the fund is or is not a fit
 - any obvious red flags or mismatches
 
+#### Mapping where a fund is investing *right now*
+
+A portfolio page answers "who did they back in 2015". The current direction is elsewhere, and the two big
+funds publish it in different places:
+
+- **Y Combinator** — `/rfs` (Requests for Startups). Each batch gets its own set, each item signed by a
+  partner, and it is the closest thing to a public investment thesis: read the titles first, then the body
+  of the two or three that touch the user's market, and quote the partner's own words rather than
+  paraphrasing. `/companies?batch=<Batch>` gives per-batch counts and the industry split in the filter
+  sidebar (B2B, Industrials, Fintech, Consumer, Healthcare…), and `/companies/industry/<sector>` lists a
+  sector across all batches. The directory only renders ~40 cards at a time; the sidebar total is the real
+  batch size.
+- **Sequoia** — has **no complete portfolio page**: `our-companies` shows only a couple of dozen trophy
+  names. Their direction lives in `/article/*` (the annual "this is AGI"-style thesis), `/series/*`
+  (thematic series such as sovereign AI) and the news posts announcing a partner's investment with a named
+  author. Read the thesis essay before the portfolio or you will describe 2020.
+- **Both** — read the *difference in stage* before comparing: one fund spreads hundreds of small bets, the
+  other writes three-figure cheques into a dozen. The same "hot area" means opposite things to each.
+
 ### Competitive Analysis
 Collect:
 - product reality, not marketing copy
@@ -93,6 +112,22 @@ Default structure:
   depth for after the call.
 - Say which of the two you are delivering in the first line ("resumen, ficha completa en el archivo").
 
+### Startup-list requests ("dame N startups que…")
+
+When the user wants a shopping list rather than a dossier, the format *is* the deliverable and they will
+say "nada más" if you add commentary:
+
+- one line per company: **name** — what it does, in the language the founder would use, no adjectives
+- group by area when they ask for areas (educación, salud, nichos raros, bien público)
+- close with a short **top 3** and the reason in a clause, not a paragraph
+- no preamble, no method note, no closing question
+- filter for what they actually asked: easy to implement, an obvious buyer, a product describable in one
+  line. Skip the deep-tech bets unless the list is explicitly about them — and say so when a whole batch
+  turned out to be wrappers on a real pain, because that *is* the finding.
+
+Keep the honest read: "simple to describe" is not "simple to run". The moat in that class of company is
+go-to-market and integration work, and the user profits from hearing that once rather than three times.
+
 ## Pitfalls
 
 - **Verify the vertical before analysing it.** A brand name plus the user's context is not evidence of
@@ -105,6 +140,14 @@ Default structure:
 - **Franchise and "current status" case studies are usually undated.** Figures like "2 open, 3 opening, 9
   reserved" age badly; present them as "at the time of that source" and list the live count as an
   information gap instead of asserting it as current.
+
+- **A curated portfolio page is marketing, not a dataset.** If a fund's site lists a handful of famous
+  names, that is the brand it wants associated with today — the absence of a company there says nothing
+  about whether it was funded. Say "their site shows N names" instead of "they only invested in N".
+- **Batch counts move after demo day.** The directory states how many companies have *launched* so far and
+  keeps adding; a count quoted today is a snapshot, not the final batch size.
+- **Requests for Startups are forward-looking asks, not investments.** They say what a fund wants to see
+  next; never present an RFS theme as evidence that the fund has backed someone in it.
 
 ## Quality Gate
 

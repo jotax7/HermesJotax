@@ -25,15 +25,15 @@
       "schedule_display": "every day at 8:30am",
       "repeat": {
         "times": null,
-        "completed": 0
+        "completed": 1
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-11-16T15:13:35.554978-03:00",
-      "next_run_at": "2026-11-17T08:30:00-03:00",
-      "last_run_at": "2026-11-16T15:14:02.815736-03:00",
+      "next_run_at": "2026-11-18T08:30:00-03:00",
+      "last_run_at": "2026-11-17T08:30:59.268677-03:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -58,8 +58,14 @@
       "timezone": "America/Argentina/Buenos_Aires",
       "fire_claim": null,
       "canonical_completions": [
-        "29e965513cb1468ca24aae36d8074ebe"
-      ]
+        "5c620deb672a49349858b3115ba0a74f"
+      ],
+      "last_dispatch": {
+        "scheduled_at": "2026-11-17T08:30:00-03:00",
+        "dispatched_at": "2026-11-17T08:30:34.264233-03:00",
+        "lateness_seconds": 34.3,
+        "kind": "on_time"
+      }
     },
     {
       "id": "cb10a53319ce",
@@ -84,16 +90,16 @@
       "schedule_display": "once at 2026-11-17 09:00",
       "repeat": {
         "times": 1,
-        "completed": 0
+        "completed": 1
       },
-      "enabled": true,
-      "state": "scheduled",
+      "enabled": false,
+      "state": "completed",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-11-16T15:36:37.518352-03:00",
-      "next_run_at": "2026-11-17T09:00:00-03:00",
-      "last_run_at": null,
-      "last_status": null,
+      "next_run_at": null,
+      "last_run_at": "2026-11-17T09:00:39.181601-03:00",
+      "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
       "last_delivery_unverified": null,
@@ -110,8 +116,13 @@
       },
       "enabled_toolsets": [],
       "workdir": null,
-      "timezone": "America/Argentina/Buenos_Aires"
+      "timezone": "America/Argentina/Buenos_Aires",
+      "run_claim": null,
+      "fire_claim": null,
+      "canonical_completions": [
+        "16600443b0b5483e8bd087463567eccb"
+      ]
     }
   ],
-  "updated_at": "2026-11-16T15:36:37.523466-03:00"
+  "updated_at": "2026-11-17T09:00:40.505167-03:00"
 }
