@@ -77,6 +77,32 @@ For retail and franchise businesses, work out who the customer of the business a
 analysing risk: a franchisor earns from supplying its network, not from the till of any single store.
 That inverts the risk read and is usually where the operational data pain lives.
 
+#### Portfolio operators (mall groups, chains, REITs)
+
+When the subject owns many assets, the interesting unit is the **asset**, not the group, and the
+per-asset numbers are already public:
+
+- **A listed operator's annual report is the only source with asset-level KPIs.** The 20-F (foreign
+  private issuers) or the earnings release carries, per property: gross leasable area, store count,
+  occupancy rate, tenant sales, and **sales per square metre** with the year-on-year change in real
+  terms. A marketing site gives you one flattering headline; the filing gives you the ranking that
+  makes a comparison possible.
+- **Sales per m² is the comparison metric.** Absolute revenue tracks size and hides performance: a
+  mall twice the area can earn the same and be half as productive. Whenever the question is "which
+  one should I be in", answer in sales per m², occupancy and real growth, in that order.
+- **Real vs nominal is the trap.** In a high-inflation market the nominal table looks like growth. Take
+  the deflator from the filing itself, or state the assumption, and label every rate as nominal or
+  real — a reader who assumes real from an unlabelled column will double the growth.
+- **Occupancy is where the negotiating leverage is.** The properties well below portfolio occupancy
+  are the ones with space to fill; the ones at 100% have nothing to offer and will price accordingly.
+- **The mix matters more than the average.** A portfolio average blends an anchor and a kiosk, so ask
+  for the category breakdown before drawing conclusions from a single number.
+
+Once the per-asset picture exists, turn it into decision questions rather than a report: why one
+property is twice as productive as a peer of the same owner, which assets sit below the occupancy
+line, how much demand the operator is capturing in each catchment, and whether the portfolio's
+growth came from the base or from one new tenant. The last one is usually the finding.
+
 ### Market Sizing
 Use:
 - top-down estimates from reports or public datasets
@@ -140,6 +166,12 @@ go-to-market and integration work, and the user profits from hearing that once r
 - **Franchise and "current status" case studies are usually undated.** Figures like "2 open, 3 opening, 9
   reserved" age badly; present them as "at the time of that source" and list the live count as an
   information gap instead of asserting it as current.
+- **Re-verify the user's own premise before building on it.** When the brief states a portfolio size,
+  a headcount or a price, check it against the latest filing first. These numbers move every fiscal
+  year, and a count that is one year stale misnumbers every comparison built on top — better to correct
+  it in the first line than to hand over an analysis of a portfolio that no longer exists.
+- **A company's own website is not the record.** It describes the brand it wants today: no divestments,
+  no closed assets, no weak quarter. Use it for identity and catalogue, the filing for numbers.
 
 - **A curated portfolio page is marketing, not a dataset.** If a fund's site lists a handful of famous
   names, that is the brand it wants associated with today — the absence of a company there says nothing

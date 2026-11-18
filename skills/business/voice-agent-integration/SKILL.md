@@ -20,19 +20,43 @@ metadata:
 - Scoping, prototyping or costing a voice channel for an enterprise assistant.
 - Someone asks which open-source speech-to-speech model to use.
 
-## Decision: cascade, and say why in one line
+## Decision: match the requirement's own wording first
 
-Use a staged pipeline (**VAD → STT → the existing LLM with tools → TTS**) unless the request is
-literally "entertain me with a duplex demo". For an agent that answers from a client's data the reasons
-are decisive:
+Before choosing an architecture, find the word the buyer uses for the capability — *bidireccional*,
+*tiempo real*, *full-duplex*, *conversacional*. That word is the acceptance criterion whether or not it is
+technically precise, and a model that does not match it gets rejected even when it is the better product.
+Two different things hide behind it:
+
+| Sense | What it means | Worth for a Q&A agent |
+|---|---|---|
+| Audio in **and** audio out in one model | A conversation of turns, streaming output | **This is the requirement** |
+| Simultaneous duplex | Speaking while listening | ~None: the user asks, waits, listens |
+
+Satisfy the word if a model that satisfies it exists. If none does, make the trade-off the **subject of a
+section in the document** — define both senses in a table, state which one the project delivers, argue why
+the other adds nothing here. A buyer who discovers the gap on his own kills the deal; a buyer who reads it
+in section 2 with an argument attached signs.
+
+For an agent that answers from a client's data, a staged pipeline (**VAD → STT → the existing LLM with
+tools → TTS**) or a turn-based omni model both beat a duplex model on the merits:
 
 - Tool calling and retrieval stay deterministic and auditable — you can log what was retrieved and why.
 - The agent keeps one source of truth; voice becomes input and output, not a second brain.
-- Open end-to-end duplex models that speak Spanish are either nonexistent or **base models without
-  instruction following or tool calling**. The good ones with native tool calling are English/Chinese.
+- **No open duplex model combines Spanish with tool calling.** The duplex ones that call tools are English
+  (Nemotron VoiceChat); the one that speaks Spanish is a base model with no instruction following and no
+  tools (Haru-4B). Check `references/model-inventory.md` for the current table.
+- A duplex model that cannot call tools still serves the agent through a **frontend/backend split**: the
+  duplex model holds the conversation and emits a delegation token plus the transcript, the existing agent
+  runs the RAG and the tools, and the answer is fed back for the duplex model to speak. Only reach for it
+  when the buyer's word is non-negotiable; otherwise the turn-based path is less work for the same result.
+  The recipe is in `references/model-inventory.md`.
 
 Sell a session layer that abstracts the model so the front end can be swapped later without touching the
 RAG.
+
+**When the user overrides your pick, defend his pick.** He knows the account and the buyer; you know the
+models. Write the document around his choice, state the one risk that could cost money or credibility
+*once*, then drop it — re-opening it next turn is friction, not diligence.
 
 ## Procedure
 
@@ -90,6 +114,16 @@ every quarter.
   minute and real maintenance; price it as its own line.
 - **Buying a GPU for voice alone rarely pays.** Below a few thousand conversations a month the box idles;
   ride on the server the text product already uses.
+- **Check the hardware floor before quoting a single model.** A 30B omni model reports around 79 GB of GPU
+  memory in BF16 — more than most client servers carry — and ~20 GB only after int4 quantisation. A
+  proposal that assumes "it runs on their existing server" without an audit puts the whole setup fee at
+  risk: make the audit a paid, dated phase with a written go/no-go, and put the VRAM requirement in the
+  client's responsibilities, not in a supuestos paragraph.
+- **One model is not a smaller project than three.** A single omni model removes the STT/TTS glue and adds
+  a serving stack, quantisation-quality risk and a VRAM floor. Price it as integration plus a technical
+  gate, never as "fewer moving parts".
+- **Model cards overstate scope.** Verify that "supports tool calling" was tested with *audio* input and
+  that a language list for text also applies to generated speech. Reading the card is not testing it.
 
 ## Validation gates before the commercial promise
 
@@ -97,3 +131,8 @@ Agree the thresholds with the client up front, then measure: word error rate in 
 accuracy on their own list, dialect retention, hallucination rate in silence, mean opinion score on the
 voice with a handful of listeners, and p95 latency over the real transport. A module that fails one gate
 is a pilot with a fix list, not a delivery.
+
+## References
+
+- `references/model-inventory.md` — open speech-to-speech models with duplex / Spanish / tool-calling /
+  licence / VRAM / latency, plus the benchmark picture for Spanish.

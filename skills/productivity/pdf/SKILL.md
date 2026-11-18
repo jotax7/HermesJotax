@@ -18,6 +18,7 @@ Create PDFs from structured specs, build and fill AcroForm forms (with layout li
 
 - **Scanned/image-only PDFs and OCR** (pymupdf fast path, marker-pdf quality path, scripts/extract_pymupdf.py + scripts/extract_marker.py): `references/ocr-extraction.md`
 - **Editing text inside an existing PDF via natural-language prompts** (nano-pdf CLI): `references/nano-pdf-editing.md`
+- **Markdown in, styled PDF out** (reports, proposals, anything the user will forward): `scripts/md2pdf.py` — markdown → HTML → WeasyPrint with CSS `@page` for page numbers, footer and repeating table headers. Use this instead of the reportlab JSON spec when the source is already a markdown document.
 
 ## When to Use
 
@@ -81,6 +82,7 @@ All helpers live in `scripts/` and are argparse CLIs — run them with the `term
 
 ```bash
 python scripts/pdf_create.py spec.json -o out.pdf         # build PDF from JSON spec
+python scripts/md2pdf.py informe.md informe.pdf           # styled PDF straight from markdown
 python scripts/pdf_make_form.py formspec.json -o form.pdf # build fillable AcroForm from JSON spec
 python scripts/pdf_form_layout.py formspec.json           # lint form layout BEFORE building
 python scripts/pdf_form_layout.py formspec.json --render-overlay boxes.png [--pdf form.pdf]
@@ -149,6 +151,8 @@ python scripts/pdf_meta.py doc.pdf --list-attachments | --extract-attachments di
 - **Radio groups**: reportlab needs ≥2 `radio()` widgets per group, fills need the slashed export value (`"/red"`), and flatten fidelity is worst for radios — see `references/forms.md`.
 - **Metadata scope**: `pdf_meta.py` writes the classic DocInfo dictionary only; embedded XMP metadata (if any) is left untouched and may show different values in some viewers.
 - **PDF/A is out of scope**: pypdf/reportlab cannot produce or validate conformant PDF/A. If archival conformance is required, run Ghostscript via the `terminal` tool (e.g. `gs -dPDFA=2 -dPDFACompatibilityPolicy=1 -sColorConversionStrategy=UseDeviceIndependentColor -sDEVICE=pdfwrite -o out.pdf in.pdf` with a suitable ICC profile) and validate with veraPDF — both are external installs, and the result still needs validation, not assumption.
+- **CSS overflow silently eats table columns.** WeasyPrint honours the widths and font sizes literally: a 7-column table at 8.3pt fits A4, a 9-column one runs off the page and the lost columns are simply absent from the output. Render page images (`pdf_page_image.py`, or `pymupdf` `page.get_pixmap()`) and *look* at the wide tables with `vision_analyze` before delivering; drop or merge a column rather than shrinking the font below ~7.5pt.
+- **Page numbers and footers come from CSS `@page`, not from the markdown.** `@bottom-right { content: counter(page) " / " counter(pages) }` is the whole trick; injecting "page 1 of 4" as text into the document breaks the moment the content reflows.
 - Rotation must be a multiple of 90; encrypted inputs must be decrypted before any other operation.
 
 ## Verification

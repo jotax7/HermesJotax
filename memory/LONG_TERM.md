@@ -49,9 +49,13 @@
 - ~~Investigación de modelos de voz~~ — informe consolidado en `research/2026-11-17_voz-bidireccional-INFORME-FINAL.md` + PDF de recomendación Qwen3-Omni.
 - ~~Presupuesto El Recreo~~ — terminado e iterado con Sabri.
 
+**18/11:**
+- Reunión por Meet con **LM Legales** (estudio de abogados, contacto `adm@lmlegales.com.ar`) para **agregar algo al agente** de conocimiento. Alcance a definir; pedir el detalle de qué módulo quieren.
+
 **Pendientes personales (16/11, repetir hasta tachar):**
-- ~~Hablarle a Migoya~~ — hecho 17/11.
-- Hacer el presupuesto de voz para Tomi.
+- **Hablarle a Migoya — PENDIENTE.** El 18/11 el usuario aclaró que todavía no lo hizo; antes estaba mal marcado como hecho.
+- ~~Presupuesto de voz para Tomi~~ — **hecho 18/11**.
+- ~~Verificar VRAM del servidor de Fulter~~ — **hecho 18/11**. Ya no bloquea la Fase 0.
 
 **Vivos:**
 1. **Gmail: 4 hilos esperándolo** — Esplendor Asunción ×2 (uno de 27 mensajes), Retail Perú, Dazzler Asunción (POC, 53 días). Sin instrucción, no tocar.

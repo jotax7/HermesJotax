@@ -28,6 +28,9 @@ the first substantive answer, not after a correction.
 2. When state changes — a thread closes, a decision lands, someone new appears — update those two
    files **and** the Drive doc `Work OS — Joaco` (id `190mCXyGaxFyBT_DxrClr9BbjRJevT-9LmZ7fVbS8fCw`),
    then say in one line what changed. Drive is what he reads; the repo is what the agent reads.
+3. Keep a dated week log at `~/work-os/logs/<year>-<month>-semana-<d>-<d>.md`: what closed, with client,
+   figure and date. He narrates his week in fragments and later asks "¿qué hice esta semana?" — answer
+   from that file, not from reconstruction. Append as he talks, without asking permission each time.
 
 ## Authority: his criterion wins
 
@@ -62,6 +65,10 @@ the first substantive answer, not after a correction.
   separate track, and no task is "for BoulderTech" unless he says so.
 - One recommendation per turn with its reason. Three options is already too many unless he asked to
   compare them.
+- **A critique of his draft is advisory, and "le mando así" ends it.** When he forwards a proposal or doc
+  and asks what you think, say the one or two things that could cost him money, once. If he answers that
+  he is sending it anyway, reply in one line and drop it — including when the same document comes up
+  again later in the session. Re-offering the same point in softer wording reads as not listening.
 
 ## Before anything leaves the building
 

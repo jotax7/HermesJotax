@@ -70,10 +70,69 @@ When the target site offers social login and the copied profile already holds th
 session, that is the fastest way past a password prompt: tap `Continue with Google`, then the
 account tile. The site authenticates without any credential crossing the chat.
 
+**When the account wanted is NOT the one in the profile**, do not fight Google's account chooser.
+Its rows are `c-wiz` custom elements: they render text in `body.innerText` but come back with no
+layout box, so `tap-text "Usar otra cuenta"` matches nothing and the helper dies with
+`KeyError: 'x'`. Drive it through the URL instead:
+
+```python
+# from the accountchooser URL the site redirected you to
+new = url.replace("/v3/signin/accountchooser?", "/v3/signin/identifier?")
+q = parse_qs(urlsplit(new).query)
+q["login_hint"] = ["the-account@example.com"]   # keep every other param intact
+Page.navigate(urlunsplit((..., urlencode(q, doseq=True), ...)))
+```
+
+Google then prefills the address, and one `tap-button "Siguiente"` lands on `challenge/pwd` with
+the email confirmed, the password box empty and focused — exactly the handover point. Typing the
+email is yours; the password and the 2FA code are the user's, always.
+
+**The copied profile carries the password store too.** On that password screen the field can arrive
+already filled with the *other* account's saved password — the browser autofilled it, nobody typed
+it. Never advance on a prefilled field: select-all and Delete over the Input domain
+(`"modifiers": 2` is Ctrl) until `input[type=password].value.length === 0`, then say you cleared it
+and hand over. Staying silent here reads as you having tried the password.
+
 Two-factor is a hard stop — it is the user's step. Drive the browser up to the 2FA screen, tell
 them exactly which window is waiting (screenshot it), and stop there. Never attempt the code, and
 never ask for it in chat. If the site's social login belongs to a *different* account than the one
 owning the target repo/project, the user will say so — ask which account owns it before starting.
+
+## Before clicking: call the app's own JSON API
+
+A logged-in SaaS is already talking to its backend from the page; `fetch()` executed through
+`Runtime.evaluate` inherits the session cookies, so it returns data the UI would take twenty clicks
+to show. Reach for this whenever the goal is *data* (lists, records, exports) rather than a state
+change: it is faster, it survives re-renders, and it paginates in code.
+
+```python
+expr = ("fetch('/api/v1/things/search',{method:'POST',"
+        "headers:{'Content-Type':'application/json'},body:JSON.stringify(%s)})"
+        ".then(r=>r.json()).then(j=>JSON.stringify({total:j.pagination&&j.pagination.total_entries,"
+        "rows:(j.items||[]).map(p=>({id:p.id,name:p.name}))}))") % json.dumps(body)
+c.send(json.dumps({"id":i,"method":"Runtime.evaluate","params":{
+    "expression":expr,"returnByValue":True,"awaitPromise":True}}))
+```
+
+- `returnByValue` **plus** `awaitPromise` is the whole trick; a bare `fetch()` returns a Promise you
+  cannot serialise.
+- **Project the fields you need inside `.then()`**, never return the raw payload — one page of 25
+  records with embedded organizations is ~120 KB and bloats the transcript.
+- **Discover the request shape from the UI**, not by guessing: open the app's search page, watch what
+  it posts, reproduce the body. A 200 carrying `pagination.total_entries` confirms the field names.
+- **Probe the page-size ceiling before looping.** Per-page is capped per endpoint and over-cap raises
+  a specific error instead of clamping (Apollo answers `per_page: 100` with HTTP 422 `Per Page Limit
+  Crossed`; 25 works). Ask for 3 records first, then size the loop from what came back.
+- **Append each page to a JSONL file as it arrives.** A wide harvest outlives one tool call's timeout;
+  incremental writes leave a usable dataset even when truncated, and dedupe happens in Python after.
+- **Stop on `page * per_page >= total_entries` and dedupe by record id.** Keyword-OR queries return
+  the same record under several terms, so raw row counts overstate the list.
+
+Locked fields are the other half of the pattern: a prospect tool cheerfully returns 2,400 contacts
+whose emails are all `email_not_unlocked@domain.com` until credits are spent one by one. Filter the
+placeholders out before handing a list over, and ask how many to unlock rather than spending the
+budget yourself. Endpoint bodies, pagination quirks and the scoring/dedupe recipe for prospect lists
+are in `references/saas-internal-api.md`.
 
 ## 4. Clicking real web apps (Angular / Material / Cloud Console)
 
@@ -105,6 +164,11 @@ real button was at `387,363` is a silent wrong-element tap, not a dead button. I
 a tap changes nothing, do not tap again: re-list the visible `<button>`/`[role=button]`
 elements with their rects and compare against what you tapped.
 
+A `KeyError: 'x'` out of the helper is the same family: the matched node has **no layout box**. That
+means a hidden duplicate, or — more often on Google and other `c-wiz`/custom-element UIs — the real
+control lives outside the light DOM. Stop text-matching and switch strategy: set the state through a
+URL parameter, or resolve the rect from a screenshot and `tap-xy`.
+
 ## 5. Verify after every step
 
 Read `location.href` and `document.body.innerText` after each action instead of trusting the click. Angular wizards scroll and re-render; "nothing happened" and "it advanced but I read a stale page" look identical otherwise.
@@ -116,6 +180,10 @@ the token can actually read). Narrating each click back to the user reads as sta
 and "why is it taking so long" is the usual response to it. When the user has said
 "just do it", finish the flow — including the final `Allow` / `Permitir` — and state
 the scopes it granted afterwards.
+
+To *show* the state, capture over CDP — `Page.captureScreenshot` returns base64 PNG of the tab,
+with no X screenshot binary and no dependence on the window manager, so it works on a headless
+display or an RDP session alike. Send that file when the user needs to see where the handover is.
 
 ## OAuth with a loopback listener (bonus)
 
