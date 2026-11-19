@@ -1,0 +1,47 @@
+{
+ "retail·Ejecutivo Comercial": {
+  "n": 25,
+  "verified_pct": 24.0,
+  "linkedin_pct": 100.0
+ },
+ "retail·Customer Service": {
+  "n": 25,
+  "verified_pct": 20.0,
+  "linkedin_pct": 100.0
+ },
+ "ecommerce·Customer Service": {
+  "n": 25,
+  "verified_pct": 16.0,
+  "linkedin_pct": 100.0
+ },
+ "logistica·Administrativo": {
+  "n": 25,
+  "verified_pct": 36.0,
+  "linkedin_pct": 100.0
+ },
+ "salud·Administrativo": {
+  "n": 25,
+  "verified_pct": 8.0,
+  "linkedin_pct": 100.0
+ },
+ "banca·Cobranzas": {
+  "n": 25,
+  "verified_pct": 24.0,
+  "linkedin_pct": 100.0
+ },
+ "seguros·Cobranzas": {
+  "n": 25,
+  "verified_pct": 48.0,
+  "linkedin_pct": 100.0
+ },
+ "inmobiliarias·Asesor Comercial": {
+  "n": 25,
+  "verified_pct": 48.0,
+  "linkedin_pct": 100.0
+ },
+ "educacion·Administrativo": {
+  "n": 25,
+  "verified_pct": 32.0,
+  "linkedin_pct": 100.0
+ }
+}

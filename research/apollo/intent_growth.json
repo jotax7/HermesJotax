@@ -1,0 +1,58 @@
+{
+ "retail": {
+  "n": 20,
+  "intent_pct": 0.0,
+  "g6_med": 0.009,
+  "g12_med": 0.018,
+  "con_locales_pct": 70.0
+ },
+ "banca": {
+  "n": 20,
+  "intent_pct": 0.0,
+  "g6_med": 0.006,
+  "g12_med": 0.007,
+  "con_locales_pct": 75.0
+ },
+ "salud": {
+  "n": 23,
+  "intent_pct": 0.0,
+  "g6_med": 0.008,
+  "g12_med": 0.02,
+  "con_locales_pct": 65.2
+ },
+ "inmobiliarias": {
+  "n": 22,
+  "intent_pct": 0.0,
+  "g6_med": 0.019,
+  "g12_med": 0.016,
+  "con_locales_pct": 68.2
+ },
+ "logistica": {
+  "n": 23,
+  "intent_pct": 0.0,
+  "g6_med": 0.012,
+  "g12_med": 0.024,
+  "con_locales_pct": 26.1
+ },
+ "seguros": {
+  "n": 25,
+  "intent_pct": 0.0,
+  "g6_med": 0.012,
+  "g12_med": 0.033,
+  "con_locales_pct": 8.0
+ },
+ "educacion": {
+  "n": 24,
+  "intent_pct": 0.0,
+  "g6_med": 0.005,
+  "g12_med": 0.014,
+  "con_locales_pct": 20.8
+ },
+ "ecommerce": {
+  "n": 20,
+  "intent_pct": 0.0,
+  "g6_med": 0.009,
+  "g12_med": 0.014,
+  "con_locales_pct": 55.0
+ }
+}
