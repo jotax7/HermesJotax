@@ -1,0 +1,84 @@
+{"pais": "Argentina", "cluster": "compras", "n": 18747}
+{"pais": "Argentina", "cluster": "licitaciones", "n": 776}
+{"pais": "Argentina", "cluster": "compliance_kyc", "n": 3689}
+{"pais": "Argentina", "cluster": "aduana", "n": 5366}
+{"pais": "Argentina", "cluster": "nomina", "n": 3725}
+{"pais": "Argentina", "cluster": "credito", "n": 1639}
+{"pais": "Argentina", "cluster": "siniestros", "n": 2426}
+{"pais": "Argentina", "cluster": "calidad", "n": 25226}
+{"pais": "Argentina", "cluster": "pricing", "n": 1677}
+{"pais": "Argentina", "cluster": "datos_bi", "n": 11727}
+{"pais": "Argentina", "cluster": "ultima_milla", "n": 2113}
+{"pais": "Argentina", "cluster": "mantenimiento", "n": 26082}
+{"pais": "Argentina", "cluster": "legal_ops", "n": 3151}
+{"pais": "Argentina", "cluster": "tesoreria", "n": 6826}
+{"pais": "Mexico", "cluster": "compras", "n": 47883}
+{"pais": "Mexico", "cluster": "licitaciones", "n": 1163}
+{"pais": "Mexico", "cluster": "compliance_kyc", "n": 7048}
+{"pais": "Mexico", "cluster": "aduana", "n": 4915}
+{"pais": "Mexico", "cluster": "nomina", "n": 8736}
+{"pais": "Mexico", "cluster": "credito", "n": 3450}
+{"pais": "Mexico", "cluster": "siniestros", "n": 2317}
+{"pais": "Mexico", "cluster": "calidad", "n": 46745}
+{"pais": "Mexico", "cluster": "pricing", "n": 4399}
+{"pais": "Mexico", "cluster": "datos_bi", "n": 17254}
+{"pais": "Mexico", "cluster": "ultima_milla", "n": 2645}
+{"pais": "Mexico", "cluster": "mantenimiento", "n": 47407}
+{"pais": "Mexico", "cluster": "legal_ops", "n": 3811}
+{"pais": "Mexico", "cluster": "tesoreria", "n": 6453}
+{"pais": "Colombia", "cluster": "compras", "n": 14873}
+{"pais": "Colombia", "cluster": "licitaciones", "n": 1170}
+{"pais": "Colombia", "cluster": "compliance_kyc", "n": 2784}
+{"pais": "Colombia", "cluster": "aduana", "n": 2752}
+{"pais": "Colombia", "cluster": "nomina", "n": 4006}
+{"pais": "Colombia", "cluster": "credito", "n": 2685}
+{"pais": "Colombia", "cluster": "siniestros", "n": 546}
+{"pais": "Colombia", "cluster": "calidad", "n": 20302}
+{"pais": "Colombia", "cluster": "pricing", "n": 1511}
+{"pais": "Colombia", "cluster": "datos_bi", "n": 13118}
+{"pais": "Colombia", "cluster": "ultima_milla", "n": 968}
+{"pais": "Colombia", "cluster": "mantenimiento", "n": 16921}
+{"pais": "Colombia", "cluster": "legal_ops", "n": 3618}
+{"pais": "Colombia", "cluster": "tesoreria", "n": 4692}
+{"pais": "Chile", "cluster": "compras", "n": 11311}
+{"pais": "Chile", "cluster": "licitaciones", "n": 1166}
+{"pais": "Chile", "cluster": "compliance_kyc", "n": 1580}
+{"pais": "Chile", "cluster": "aduana", "n": 2401}
+{"pais": "Chile", "cluster": "nomina", "n": 1413}
+{"pais": "Chile", "cluster": "credito", "n": 792}
+{"pais": "Chile", "cluster": "siniestros", "n": 851}
+{"pais": "Chile", "cluster": "calidad", "n": 15729}
+{"pais": "Chile", "cluster": "pricing", "n": 1069}
+{"pais": "Chile", "cluster": "datos_bi", "n": 6525}
+{"pais": "Chile", "cluster": "ultima_milla", "n": 736}
+{"pais": "Chile", "cluster": "mantenimiento", "n": 15243}
+{"pais": "Chile", "cluster": "legal_ops", "n": 818}
+{"pais": "Chile", "cluster": "tesoreria", "n": 3692}
+{"pais": "Brazil", "cluster": "compras", "n": 95835}
+{"pais": "Brazil", "cluster": "licitaciones", "n": 395}
+{"pais": "Brazil", "cluster": "compliance_kyc", "n": 14914}
+{"pais": "Brazil", "cluster": "aduana", "n": 6506}
+{"pais": "Brazil", "cluster": "nomina", "n": 3695}
+{"pais": "Brazil", "cluster": "credito", "n": 17488}
+{"pais": "Brazil", "cluster": "siniestros", "n": 2298}
+{"pais": "Brazil", "cluster": "calidad", "n": 73536}
+{"pais": "Brazil", "cluster": "pricing", "n": 8041}
+{"pais": "Brazil", "cluster": "datos_bi", "n": 52210}
+{"pais": "Brazil", "cluster": "ultima_milla", "n": 4725}
+{"pais": "Brazil", "cluster": "mantenimiento", "n": 118521}
+{"pais": "Brazil", "cluster": "legal_ops", "n": 16958}
+{"pais": "Brazil", "cluster": "tesoreria", "n": 8113}
+{"pais": "United States", "cluster": "compras", "n": 326482}
+{"pais": "United States", "cluster": "licitaciones", "n": 1562}
+{"pais": "United States", "cluster": "compliance_kyc", "n": 245392}
+{"pais": "United States", "cluster": "aduana", "n": 5440}
+{"pais": "United States", "cluster": "nomina", "n": 123705}
+{"pais": "United States", "cluster": "credito", "n": 102371}
+{"pais": "United States", "cluster": "siniestros", "n": 165447}
+{"pais": "United States", "cluster": "calidad", "n": 447448}
+{"pais": "United States", "cluster": "pricing", "n": 55427}
+{"pais": "United States", "cluster": "datos_bi", "n": 301485}
+{"pais": "United States", "cluster": "ultima_milla", "n": 96051}
+{"pais": "United States", "cluster": "mantenimiento", "n": 508459}
+{"pais": "United States", "cluster": "legal_ops", "n": 196283}
+{"pais": "United States", "cluster": "tesoreria", "n": 65210}
