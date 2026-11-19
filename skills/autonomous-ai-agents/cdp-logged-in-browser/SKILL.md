@@ -116,6 +116,12 @@ c.send(json.dumps({"id":i,"method":"Runtime.evaluate","params":{
 
 - `returnByValue` **plus** `awaitPromise` is the whole trick; a bare `fetch()` returns a Promise you
   cannot serialise.
+- **Return `r.text()` and parse it in Python.** A JS chain that throws — a typo in a field name, a
+  response shape you guessed wrong, a rejected promise — comes back as an empty or `None` value from
+  `Runtime.evaluate`, which reads exactly like "the endpoint returned nothing". Fetch the raw text,
+  then `json.loads` it where you can see the exception and the status code. Check
+  `result.subtype == "error"` on the reply and print its `description` instead of treating the miss
+  as an empty result set.
 - **Project the fields you need inside `.then()`**, never return the raw payload — one page of 25
   records with embedded organizations is ~120 KB and bloats the transcript.
 - **Discover the request shape from the UI**, not by guessing: open the app's search page, watch what

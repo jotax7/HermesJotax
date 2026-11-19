@@ -54,6 +54,10 @@ the first substantive answer, not after a correction.
 - **When he dictates a format, the format is the deliverable.** "Dame 20, con una línea cada una, y abajo
   tu top 3. Nada más" means exactly that: no preamble, no method note, no closing question. If it needs
   context he did not ask for, it goes in a file, not in the reply.
+- **"Mandámelo en PDF" means the branded template, not a raw dump.** Run
+  `scripts/md2pdf.py <src.md> <out.pdf>`: A4, Helvetica, tablas con encabezado gris, pie
+  "BoulderTech · Confidencial" y numeración. Reuse it for proposals, research and one-pagers instead of
+  writing CSS per document — and render page 1 to a screenshot to check tables fit before sending.
 
 ## Don't turn his work into consulting theater
 
@@ -69,6 +73,14 @@ the first substantive answer, not after a correction.
   and asks what you think, say the one or two things that could cost him money, once. If he answers that
   he is sending it anyway, reply in one line and drop it — including when the same document comes up
   again later in the session. Re-offering the same point in softer wording reads as not listening.
+
+## Access is not the task
+
+"Conectate a Apollo", "logueate ahí", "te paso el acceso" asks for a *session*, not the downstream job.
+Stop when the login is verified: confirm in one line what is open and who is logged in, and wait.
+Harvesting, scoring and delivering because the credentials were already there is work he did not
+commission, and it earns "yo no te pedí que hagas nada". If the next step is obvious, offer it in one
+sentence ("¿arranco con la lista de X?") instead of shipping it.
 
 ## Before anything leaves the building
 

@@ -64,6 +64,15 @@ bajo" is an opinion; "un proveedor que cambia su API se come el margen de tres m
   the day the rest of the company logs in, revenue stays flat and the relationship has nowhere to grow.
 - **Do not gift extra sources or modules.** Price them, then discount the bundle. A gift destroys the
   reference price for the next source the client asks for; a discounted line item keeps it.
+- **A module sold on top of an under-priced base fee needs its own reference price, not arithmetic.** When
+  the client already pays X and the new module is a multiple of X, comparing the two invites "entonces por
+  qué no cobrabas esto antes". Give the module a name and quote it against a **list price** you state
+  ("lista 1.200, a ustedes 800 por ser los primeros"): the anchor becomes the list price, the discount is
+  the concession, and the old fee stays untouched. The same logic recovers margin the base fee gave away —
+  a client who says the current price is cheap just told you where the next module's price lives.
+- **An add-on's setup pays for the add-on's integration, not for the base product.** Weeks of calibration and
+  a technical gate behind a module do not fit a "small add-on" figure; if the setup cannot cover that work,
+  make the first phase a paid, dated technical validation instead of shrinking the implementation fee.
 - **Every recurring line has a variable cost behind it.** Map it before signing: per-conversation messaging,
   inference, telephony, storage, support hours, third-party subscriptions. If the client can drive usage up
   without the fee moving, the contract is short a lever.

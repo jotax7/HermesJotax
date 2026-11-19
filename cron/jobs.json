@@ -25,15 +25,15 @@
       "schedule_display": "every day at 8:30am",
       "repeat": {
         "times": null,
-        "completed": 2
+        "completed": 3
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-11-16T15:13:35.554978-03:00",
-      "next_run_at": "2026-11-19T08:30:00-03:00",
-      "last_run_at": "2026-11-18T08:30:55.277472-03:00",
+      "next_run_at": "2026-11-20T08:30:00-03:00",
+      "last_run_at": "2026-11-19T08:30:57.713709-03:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -58,11 +58,11 @@
       "timezone": "America/Argentina/Buenos_Aires",
       "fire_claim": null,
       "canonical_completions": [
-        "7e5b41b9f68f41e8835d29a1d7a38cbe"
+        "7edf3ba6a8504a0688f53681a0926eaf"
       ],
       "last_dispatch": {
-        "scheduled_at": "2026-11-18T08:30:00-03:00",
-        "dispatched_at": "2026-11-18T08:30:34.264431-03:00",
+        "scheduled_at": "2026-11-19T08:30:00-03:00",
+        "dispatched_at": "2026-11-19T08:30:34.255397-03:00",
         "lateness_seconds": 34.3,
         "kind": "on_time"
       }
@@ -124,5 +124,5 @@
       ]
     }
   ],
-  "updated_at": "2026-11-18T08:30:57.372152-03:00"
+  "updated_at": "2026-11-19T08:30:59.549445-03:00"
 }

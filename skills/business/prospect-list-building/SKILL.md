@@ -18,6 +18,9 @@ metadata:
 
 - "Conectate a Apollo / HubSpot / Sales Navigator y armame una lista de…"
 - Scoping a new market or vertical and needing to know how many reachable decision-makers exist.
+- Sizing an opportunity — "¿dónde hay plata para construir un producto?" — which is the same data read
+  backwards: role density, buyer count, seniority and reachability instead of names. Query set and
+  reading rules in `references/market-sizing.md`.
 - Before any outbound: the list is the input, the message is the next skill.
 
 ## The deliverable is a scored CSV plus a coverage read, not a wall of names
@@ -39,8 +42,10 @@ Do not paste 2,000 names into chat. Attach the files, summarise in five lines.
    language(s) the market uses. Spanish and English titles coexist at the same company more often than
    not, so include the pair (`Gerente Comercial` / `Commercial Director`).
 2. **Probe before harvesting**: 3 records, check the field names and the per-page cap, then size the
-   loop. The mechanics — page limits, `awaitPromise`, JSONL appends, dedupe — live in the
-   `cdp-logged-in-browser` skill, under its internal-API reference for Apollo.
+   loop. The query set that sizes a market and the reading rules are in `references/market-sizing.md`;
+   the mechanics of calling a logged-in app's JSON API — `awaitPromise`, per-page caps, JSONL appends,
+   dedupe, locked-field detection — are in the `cdp-logged-in-browser` skill, in its
+   `saas-internal-api` reference.
 3. **Count first, harvest second.** If the query returns 40,000 people, the filter is wrong — narrow by
    company type or seniority until the universe is small enough to read.
 4. **Dedupe by record id**, never by name: the same person appears under several keyword terms and
@@ -64,6 +69,14 @@ Useful starting set when the buyer is a shopping-centre operator or a retail cha
 
 Keyword tags that actually return malls: `shopping center`, `shopping mall`, `centro comercial`,
 `centros comerciales`, `mall`. Plain `retail` returns an order of magnitude more and mostly noise.
+
+## Sizing instead of listing
+
+When the question is *where to build or sell* rather than *who to call*, the same endpoints answer it:
+role density by country, company universe by vertical × employee band, a vertical × role cross-tab,
+seniority distribution and a reachability sample. The query set, the interpretation rules (pool = budget
+already spent, seats per buyer, entry-level share = no champion) and the limits to declare in the
+deliverable are in `references/market-sizing.md`.
 
 ## Pitfalls
 

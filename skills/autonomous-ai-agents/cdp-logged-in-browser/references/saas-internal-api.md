@@ -34,6 +34,42 @@ session cookie applies and no API key is needed.
 
 Check the remaining credit balance on `/#/home` ("2.9K credits") before proposing any reveal.
 
+**Company search** — `POST /api/v1/mixed_companies/search`
+
+```json
+{
+  "page": 1,
+  "per_page": 25,
+  "q_organization_keyword_tags": ["logistics", "freight"],
+  "organization_locations": ["Argentina"],
+  "organization_num_employees_ranges": ["51,100", "101,200"]
+}
+```
+
+- Same 25/page ceiling. Response: `pagination.total_entries` plus `organizations[]` (fall back to
+  `accounts[]`) carrying `id`, `name`, `linkedin_url`, `website_url`, `estimated_num_employees`,
+  `organization_headcount_six_month_growth` / `_twelve_month_growth` / `_twenty_four_month_growth`,
+  `num_retail_locations`, `organization_revenue`, `has_intent_signal_account`, `intent_strength`,
+  `founded_year`, `naics_codes`.
+- `/api/v1/organizations/search` also answers 200 but returns the leaner shape; the mixed endpoint is
+  the one that carries the growth fields.
+- `estimated_num_employees` and `organization_revenue` are frequently null or `0` outside the
+  vendor's core markets, so revenue-per-employee tables built on them are fiction. Check one page
+  before designing around a field.
+
+**Filters worth knowing**
+
+- `person_seniorities`: `owner | founder | c_suite | vp | head | director | manager | senior | entry |
+  intern`. One call per level gives a distribution — the fastest way to tell whether a function has an
+  internal owner or is a pure cost line.
+- `person_titles` **plus** `q_organization_keyword_tags` in the same people body is a vertical × role
+  cross-tab, which is where the interesting numbers live.
+- Counting is free: send `per_page: 1` and read `total_entries`. A few hundred of these cost no credits.
+
+**Parse on the Python side.** A `.then(j => j.some?.chain)` that throws comes back as `null` through
+`Runtime.evaluate` and reads as "no results". Return `r.text()` from the promise and `json.loads`
+client-side: the query that "returned nothing" is usually fine.
+
 ## From raw rows to a list he can act on
 
 1. Load the JSONL, dedupe by `id` with `dict.setdefault`, keep insertion order.

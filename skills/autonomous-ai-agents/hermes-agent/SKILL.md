@@ -111,6 +111,7 @@ Profiles use `~/.hermes/profiles/<name>/` with the same layout. When a profile i
 | delegate_task "capped at N" reports | `references/delegate-task-concurrency-diagnosis.md` |
 | "Can app X use my Nous Portal subscription/OAuth?" | `references/portal-auth-for-third-party-apps.md` |
 | Connecting a messaging platform (Telegram, Discord, Slack, WhatsApp, …), restarting the gateway to load it, or proving only allowed users reach the bot | docs: `/user-guide/messaging/<platform>` + `references/messaging-channels.md` + `scripts/verify-channel-authz.py` |
+| Giving Hermes to someone else — family, a non-technical colleague, a client — hosted vs self-hosted, VPS sizing, starting the dashboard, handover checklist | `references/self-hosting-for-others.md` |
 
 The reference list above is not the feature list — it is the set of topics that
 need more than their docs page. For everything else Hermes ships, fetch
