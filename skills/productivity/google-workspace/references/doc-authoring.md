@@ -77,6 +77,42 @@ docs.documents().batchUpdate(documentId=did, body={"requests": reqs}).execute()
 - Appending is the right move for a log or a pending list. Rewriting the whole body is the right move for a
   structural change — pick per document and note which one it is at the top of the file.
 
+## Markdown in, formatted Doc out — tables included
+
+The two-pass path above is for hand-built text. When the source is already markdown (a research
+report, a proposal, a decision doc), skip it: convert to HTML and let Drive do the import. Headings,
+bold, lists and **real Doc tables** survive in a single call, and the file lands in a folder.
+
+```python
+import io, markdown
+from googleapiclient.http import MediaIoBaseUpload
+
+md = Path(src).read_text(encoding="utf-8")
+html = ("<html><head><meta charset='utf-8'></head><body>"
+        + markdown.markdown(md, extensions=["tables", "sane_lists"])
+        + "</body></html>")
+
+media = MediaIoBaseUpload(io.BytesIO(html.encode("utf-8")), mimetype="text/html", resumable=False)
+f = drive.files().create(
+    body={"name": title,
+          "parents": [folder_id],                    # the target folder, not My Drive root
+          "mimeType": "application/vnd.google-apps.document"},
+    media_body=media, fields="id,name,webViewLink").execute()
+```
+
+- `mimeType: application/vnd.google-apps.document` **on the body** triggers the conversion. Without it
+  you upload an HTML file Drive merely previews, and the user opens the wrong thing.
+- `extensions=["tables"]` is what produces real tables — but verify instead of assuming: count the
+  `body.content` entries carrying `"table"` and print rows × columns. A malformed markdown table
+  degrades into paragraphs silently, and the reader sees a wall of pipe characters.
+- `parents` takes folder **ids**, not names. Resolve one with
+  `drive.files().list(q="name = 'COMERCIAL' and mimeType = 'application/vnd.google-apps.folder' and trashed = false")`,
+  and confirm placement afterwards with `files().get(fileId=..., fields="parents")`.
+- The bundled CLI has no "list a folder's contents" action (`drive list` is not a subcommand); for
+  that use `files().list(q="'<FOLDER_ID>' in parents and trashed = false", orderBy="modifiedTime desc")`.
+- Same verification floor as above: paragraph count, table count, parents, then quote the
+  `webViewLink`. "Created" is not "readable".
+
 ## Rules
 
 - **Offsets are cumulative and include the trailing newline** of every line (`len(line) + 1`).

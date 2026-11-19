@@ -28,7 +28,7 @@ Gmail, Calendar, Drive, Contacts, Sheets, and Docs — through Hermes-managed OA
 - `references/oauth-desktop-setup.md` — creating the Desktop OAuth client in the Cloud console (project → APIs in one flow → consent screen → client JSON), Internal vs External audience trade-off, and the loopback+PKCE approval flow without code pasting.
 - `references/drive-corpus-audit.md` — "scan folder X and give me a roadmap": recursive enumeration, exporting Docs/Sheets/Slides/PDF to text, dedupe, contradictions between documents as findings.
 - `references/gmail-pipeline-audit.md` — auditing a sales pipeline from email alone: who owes a reply, staleness, and the calendar/billing bulk noise that otherwise dominates the list.
-- `references/doc-authoring.md` — creating a styled Google Doc from a script (insert text, then style paragraphs; offset arithmetic and verification) and appending a new section to a living doc safely (endIndex math, dedupe check, restyling the appended block).
+- `references/doc-authoring.md` — authoring a formatted Google Doc from a script: importing existing markdown as a Doc (headings and real tables preserved, landed in a target folder) in one call, building a styled doc text-then-style, and appending a section to a living doc safely (endIndex math, dedupe check, restyling).
 
 ## Scripts
 

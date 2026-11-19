@@ -74,6 +74,30 @@ the first substantive answer, not after a correction.
   he is sending it anyway, reply in one line and drop it — including when the same document comes up
   again later in the session. Re-offering the same point in softer wording reads as not listening.
 
+## Documents he will decide on get an adversarial pass
+
+When he asks for a research or decision document — "hacelo bien", "tomatelo con tiempo", "iterá con
+subagentes antes de entregar" — the draft is not the deliverable. Run: parallel research → draft →
+**two critics on the draft** → revise → deliver. The two passes are different on purpose and both pay:
+
+- **Consistency critic.** Verify every number against the source files, recompute the arithmetic, and
+  flag any figure that appears with two different values across sections. The cheap-to-avoid,
+  expensive-to-ship failure: a break-even computed from three different average-ticket values in the
+  same document, or a cost table quoted at five seats while the recommendation says four.
+- **Strategic critic.** Read it as his partner would. Does the first twenty seconds answer the question
+  he asked; what would his boss ask that the document does not answer; is the recommendation honest
+  against the cheaper option. Ask it explicitly what would make the text read as AI-written —
+  symmetrical lists, "lectura honesta" announcing its own honesty, a verdict decided before the evidence.
+
+Two rules for the recommendation itself:
+
+- **Always include the "not now" option with its calendar reason.** If the sprint, the deadline or his
+  own available hours make adoption unlikely this month, "compralo en enero" is a better answer than
+  optimising which plan to buy — and it has to say what changes by January.
+- **One economic baseline, used everywhere.** Pick the single real figure available (a client's actual
+  contract, never an invented average), state it once, and derive break-even, sensitivity and payback
+  from it. A range is acceptable; three baselines are not.
+
 ## Access is not the task
 
 "Conectate a Apollo", "logueate ahí", "te paso el acceso" asks for a *session*, not the downstream job.

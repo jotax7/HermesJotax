@@ -22,6 +22,11 @@ session cookie applies and no API key is needed.
 ```
 
 - `per_page` ceiling is **25**; 100 returns `422 {"error":"Per Page Limit Crossed."}`.
+- **A query stops yielding around 2,500 records (100 pages × 25).** When `total_entries` is larger,
+  pages past that ceiling come back empty, so a loop keyed on `page * per_page >= total` spends a
+  hundred calls and gains nothing. Split the query — by country, by vertical, by title cluster —
+  instead of paginating deeper, and say in the deliverable when the universe is bigger than the cap
+  and the harvest is partial.
 - Response: `pagination.total_entries`, `pagination.total_pages`, and `people[]` where each record
   carries `id`, `name`, `title`, `city`, `state`, `country`, `linkedin_url`, `email_status`,
   `email`, and a nested `organization` (`name`, `estimated_num_employees`, `industry`).
